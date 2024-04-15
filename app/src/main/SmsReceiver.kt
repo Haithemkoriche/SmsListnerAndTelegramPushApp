@@ -7,7 +7,6 @@ import android.provider.Telephony
 import android.util.Log
 
 class SmsReceiver : BroadcastReceiver() {
-
     override fun onReceive(context: Context?, intent: Intent?) {
         if (intent?.action == Telephony.Sms.Intents.SMS_RECEIVED_ACTION) {
             val smsMessages = Telephony.Sms.Intents.getMessagesFromIntent(intent)
